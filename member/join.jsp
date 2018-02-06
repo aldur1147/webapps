@@ -10,12 +10,8 @@
 <body>
 <h2>회원가입</h2>
 '*'표시 항목은 필수 입력 항목입니다.
-<form action="" method="post" name="frm">
+<form action="/book/Book.do?command=book_joinin" method="post" name="frm">
 <table>
-<tr>
-<td>이름</td>
-<td><input type="text" name="name">*</td>
-</tr>
 <tr>
 <td>아이디</td>
 <td>
@@ -31,6 +27,10 @@
 <tr>
 <td>암호 확인</td>
 <td><input type="password" name="pwd_check">*</td>
+</tr>
+<tr>
+<td>이름</td>
+<td><input type="text" name="name">*</td>
 </tr>
 <tr>
 <td>이메일</td>
