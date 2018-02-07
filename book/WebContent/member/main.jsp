@@ -9,9 +9,11 @@
 </head>
 <body>
 <h2 align="left">도서대출</h2>
-
-	
-	<!-- 로그인창 -->
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top"
+        role="navigation">
+    <div class="header">
+    <!-- 로그인창 -->
 		<p align="right">	
 			<input type="button" value="로그인">&nbsp;
 			<input type="button" value="회원가입"><br>
@@ -25,6 +27,11 @@
 			
 		</p>
 	</form>
+    </div>
+    </nav>
+</header>
+	
+	
 <!-- 검색순위 창 -->
 	
 	<table>
