@@ -1,15 +1,14 @@
 package com.book.controller;
 
 import com.book.action.Action;
-import com.book.action.BookjoinAction;
-import com.book.action.BookjoininAction;
-import com.book.action.BooksearchAction;
-import com.book.controller.ActionFactory;
+import com.book.action.BookloginFormAction;
 
 public class ActionFactory {
-private ActionFactory() {}
-	
 	private static ActionFactory instance = new ActionFactory();
+	
+	private ActionFactory() {
+		super();
+	}
 	
 	public static ActionFactory getInstance() {
 		return instance;
@@ -17,17 +16,11 @@ private ActionFactory() {}
 	
 	public Action getAction(String command) {
 		Action action = null;
+		System.out.println("ActionFactory :" + command);
 		
-		if(command.equals("book_join")) {
-			action = new BookjoinAction();
-		}
-		else if(command.equals("book_joinin")) {
-			action = new BookjoininAction();
-		}
-		else if(command.equals("book_search")) {
-			action = new BooksearchAction();
-		}
-			
+		if(command.equals("book_login")) {
+			action = new BookloginFormAction();
+		} 
 		return action;
 	}
 }
