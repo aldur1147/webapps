@@ -2,23 +2,23 @@ package com.book.action;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.book.dao.MemberDAO;
+import com.book.dao.BookDAO;
 
-public class BookloginFormAction implements Action{
+public class BookborrowAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/member/login.jsp"; //???
+		//System.out.println(request.getParameter("title"));
+		String title = request.getParameter("title");
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-		dispatcher.forward(request, response);
+		BookDAO bdo = BookDAO.getInstance();
+		bdo.bookBorrow(title);
 		
-		
+		response.sendRedirect("");
 	}
 
 }

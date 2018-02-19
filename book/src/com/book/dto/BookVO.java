@@ -7,6 +7,7 @@ public class BookVO {
 	private String publisher;
 	private String num;
 	private int confirm;
+
 	public String getTitle() {
 		return title;
 	}

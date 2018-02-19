@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2 align="left">도서대출</h2>
 <!-- 해더  수정요망 -->
 <header>
     <!-- 로그인창 -->
@@ -30,26 +28,7 @@
 		</p>
 	</form>
 </header>
-	
-	
-<!-- 검색순위 창 수정요망-->
-	
-	<table>
-		<tr>
-			<th>검색순위</th>
-		</tr>
-	<c:forEach var="rank" items="${rank}">
-		<tr>
-			<td>${rank.title}</td>
-		</tr>
-	</c:forEach>
-	</table>
-	
-<!-- 추천도서 이미지  수정요망-->
-	
-	<div align="right"><img src="\book\image\Noimage.png"></div>
-	
-
+<h3>검색 내용이 없습니다.</h3>
 
 </body>
 </html>

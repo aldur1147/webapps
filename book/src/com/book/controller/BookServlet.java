@@ -17,24 +17,35 @@ import com.book.action.Action;
 public class BookServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
     public BookServlet() {
         super();
     }
 
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String command = request.getParameter("command");
-		System.out.println("BookServlet에서 요청을 받음을 확인 : "+command);
+		System.out.println("command : "+command);
 		
+		//getAction()으로 위임
 		ActionFactory af = ActionFactory.getInstance();
 		Action action = af.getAction(command);
-		
-		if(action != null) {
+		//action을 리번받아서 실행(동적바인딩)
+		if(action!=null) {
 			action.execute(request, response);
 		}
 	}
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
 		doGet(request, response);
 	}
 
