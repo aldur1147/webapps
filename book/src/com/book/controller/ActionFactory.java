@@ -1,6 +1,7 @@
 package com.book.controller;
 
 import com.book.action.Action;
+import com.book.action.BookafterloginAction;
 import com.book.action.BookborrowAction;
 import com.book.action.BookdetailAction;
 import com.book.action.BookjoinAction;
@@ -35,6 +36,9 @@ public class ActionFactory {
 		}
 		else if(command.equals("book_login")) {
 			action = new BookloginFormAction();
+		}
+		else if(command.equals("book_afterlogin")) {
+			action = new BookafterloginAction();
 		}
 		else if(command.equals("book_join")) {
 			action = new BookjoinAction();

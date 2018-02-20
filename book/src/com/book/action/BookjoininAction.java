@@ -22,7 +22,7 @@ public class BookjoininAction implements Action {
 		MemberDAO bDao = MemberDAO.getInstance();
 		bDao.bookJoin(mvo);
 		
-		response.sendRedirect("/book/Book.do?command=join");
+		response.sendRedirect("/book/Book.do?command=book_join");
 	}
 
 }

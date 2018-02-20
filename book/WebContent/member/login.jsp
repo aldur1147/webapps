@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 관리</title>
-<script type="text/javascript" src="script/member.js"></script>
+<script type="text/javascript" src="member/script/member.js"></script>
 </head>
 <body>
 <h2>로그인</h2>
-<form action="" method="post" name="frm">
+<form action="/book/Book.do?command=book_afterlogin" method="post" name="frm">
 <table>
 <tr>
 <td>아이디</td>
